@@ -5,6 +5,9 @@
   "repository": "https://gitlab.e1c.net/bots/chekov",
   "license": "MIT",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "@slack/client": "^3.13.0",
     "bluebird": "^3.5.0",
