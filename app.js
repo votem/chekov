@@ -173,6 +173,8 @@ rtm.on(slack.CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, () => {
     bot.closeRTM();
     rtm.disconnect();
 
+    process.exit();
+
   }));
 
 });
