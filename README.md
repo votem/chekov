@@ -8,20 +8,29 @@ answer is no, a follow up question will be asked to give the reasons why.
 A number of configuration options are available via environment variable;
 see [`env/example.env`](env/example.env) for more information.
 
-To run the bot once, execute
+## Prerequisites
 
-```bash
-. env/your.env && npm start
-```
+*   Node.js (tested with version 6 but others should work)
+*   Administrative access to a Slack workspace for configuration
+*   Docker (optional)
 
-A dockerfile is also provided
+## Setup
 
-```bash
-docker build -t chekov .
-```
+To use chekov a bot must first be configured in your Slack workspace. More
+information on setting up Slack bots can be found [here](https://api.slack.com/bot-users).
 
-```bash
-docker run --env-file env/example.env chekov
-```
+Once that is complete, create a new environment file by coping the example
+in the `env` folder. Add the generated token to it, and configure the other
+values as appropriate. Note that the bot must be invited to the desired posting
+channel with `/invite @chekov` (assuming you named your bot `chekov` in Slack,
+which you should; add a nice avatar of Walter Koenig while you're at it)
 
-Note you must invite bot to channel.
+Finally run `npm i` to install Node.js dependencies.
+
+## Usage
+
+To run the bot once, execute `. env/your.env && npm start`. It will go through
+its questions with the configured users, post the results, and then exit.
+
+A `Dockerfile` is also provided. Execute `docker built -t chekov .` to build the
+image, and then run it with `docker run --env-file env/your.env chekov`.
