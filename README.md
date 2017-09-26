@@ -34,3 +34,15 @@ its questions with the configured users, post the results, and then exit.
 
 A `Dockerfile` is also provided. Execute `docker built -t chekov .` to build the
 image, and then run it with `docker run --env-file env/your.env chekov`.
+
+## Credits
+
+This software was developed as an internal project at Everyone Counts, Inc.
+
+Everyone Counts provides elegantly simple software and exceptional services to upgrade
+the election process. The eLect brand offers unrivaled web-based voting products including
+Voter Registration, Online Voting, and Remote Accessible Voting. The product suite
+is designed to address pain points facing election officials today, including security,
+accessibility, cost, and sustainability.
+
+For more information, visit http://everyonecounts.com.
