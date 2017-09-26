@@ -16,7 +16,7 @@ see [`env/example.env`](env/example.env) for more information.
 
 ## Setup
 
-To use chekov a bot must first be configured in your Slack workspace. More
+To use Chekov a bot must first be configured in your Slack workspace. More
 information on setting up Slack bots can be found [here](https://api.slack.com/bot-users).
 
 Once that is complete, create a new environment file by coping the example
@@ -32,7 +32,7 @@ Finally run `npm i` to install Node.js dependencies.
 To run the bot once, execute `. env/your.env && npm start`. It will go through
 its questions with the configured users, post the results, and then exit.
 
-A `Dockerfile` is also provided. Execute `docker built -t chekov .` to build the
+A `Dockerfile` is also provided. Execute `docker build -t chekov .` to build the
 image, and then run it with `docker run --env-file env/your.env chekov`.
 
 ## Credits
